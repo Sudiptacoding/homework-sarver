@@ -21,10 +21,10 @@ const homeworkSchema = new mongoose.Schema({
     }
 })
 
-const homeworkModel = mongoose.model('project', homeworkSchema);
+const homeworkModel = mongoose.model('projects', homeworkSchema);
 console.log(homeworkModel)
 const dbCunnect = async () => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/homework');
+    await mongoose.connect('mongodb+srv://sudipta:ppmDbA0zQBnhgPBv@cluster0.yjaatuq.mongodb.net/sudipta?retryWrites=true&w=majority');
     console.log('Db cunnect sucessfully')
 }
 
