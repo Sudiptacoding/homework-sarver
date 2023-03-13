@@ -43,16 +43,9 @@ app.post('/user', async (req, res) => {
 })
 
 app.get("/userlist", async (req, res) => {
-    try {
-        const user = await homeworkModel.find();
-        if (user) {
-            res.status(200).send(user)
-        } else {
-            res.status(404).send("User not found")
-        }
-    } catch (error) {
-        res.status(502).send(error)
-    }
+    const user =await homeworkModel.find();
+    res.send(user)
+
 })
 
 app.get('/', (req, res) => {
