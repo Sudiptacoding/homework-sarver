@@ -55,6 +55,10 @@ app.get("/userlist", async (req, res) => {
     }
 })
 
+app.get('/', (req, res) => {
+    res.send("Ami output")
+})
+
 app.listen(PORT, async () => {
     await dbCunnect()
     console.log(`https://localhost run ${PORT}`)
