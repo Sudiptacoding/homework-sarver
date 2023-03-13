@@ -42,15 +42,15 @@ app.post('/user', async (req, res) => {
     }
 })
 
-app.get("/userlist", async (req, res) => {
+app.get("/", async (req, res) => {
     const user =await homeworkModel.find();
     res.send(user)
 
 })
 
-app.get('/', (req, res) => {
-    res.send("Ami output")
-})
+// app.get('/', (req, res) => {
+//     res.send("Ami output")
+// })
 
 app.listen(PORT, async () => {
     await dbCunnect()
