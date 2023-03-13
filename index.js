@@ -42,10 +42,13 @@ app.post('/user', async (req, res) => {
     }
 })
 
-app.get("/", async (req, res) => {
-    const user =await homeworkModel.find();
+app.get("/user", async (req, res) => {
+    const user = await homeworkModel.find();
     res.send(user)
 
+})
+app.get('/', (req, res) => {
+    res.send('Hello world i am all user')
 })
 
 // app.get('/', (req, res) => {
